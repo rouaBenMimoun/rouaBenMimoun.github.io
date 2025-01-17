@@ -1,0 +1,16 @@
+/home/rouabm/Desktop/doc_cysed/appsec/cybersecapp_final/iam/src/main/java/tn/cyber/IAMApplication.java
+/home/rouabm/Desktop/doc_cysed/appsec/cybersecapp_final/iam/src/main/java/tn/cyber/boundaries/IdentityRegistrationEndpoint.java
+/home/rouabm/Desktop/doc_cysed/appsec/cybersecapp_final/iam/src/main/java/tn/cyber/boundaries/OAuthAuthorizationEndpoint.java
+/home/rouabm/Desktop/doc_cysed/appsec/cybersecapp_final/iam/src/main/java/tn/cyber/boundaries/OAuthTokenEndpoint.java
+/home/rouabm/Desktop/doc_cysed/appsec/cybersecapp_final/iam/src/main/java/tn/cyber/entities/Identity.java
+/home/rouabm/Desktop/doc_cysed/appsec/cybersecapp_final/iam/src/main/java/tn/cyber/entities/Tenant.java
+/home/rouabm/Desktop/doc_cysed/appsec/cybersecapp_final/iam/src/main/java/tn/cyber/enums/Role.java
+/home/rouabm/Desktop/doc_cysed/appsec/cybersecapp_final/iam/src/main/java/tn/cyber/filters/CORSFilter.java
+/home/rouabm/Desktop/doc_cysed/appsec/cybersecapp_final/iam/src/main/java/tn/cyber/repositories/IamRepository.java
+/home/rouabm/Desktop/doc_cysed/appsec/cybersecapp_final/iam/src/main/java/tn/cyber/repositories/IdentityRepository.java
+/home/rouabm/Desktop/doc_cysed/appsec/cybersecapp_final/iam/src/main/java/tn/cyber/repositories/TenantRepository.java
+/home/rouabm/Desktop/doc_cysed/appsec/cybersecapp_final/iam/src/main/java/tn/cyber/security/Argon2Utils.java
+/home/rouabm/Desktop/doc_cysed/appsec/cybersecapp_final/iam/src/main/java/tn/cyber/security/AuthorizationCode.java
+/home/rouabm/Desktop/doc_cysed/appsec/cybersecapp_final/iam/src/main/java/tn/cyber/security/JwtManager.java
+/home/rouabm/Desktop/doc_cysed/appsec/cybersecapp_final/iam/src/main/java/tn/cyber/services/EmailService.java
+/home/rouabm/Desktop/doc_cysed/appsec/cybersecapp_final/iam/src/main/java/tn/cyber/services/IdentityServices.java
