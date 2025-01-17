@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cybersecapp- Login</title>
+    <!-- Bootstrap CSS and Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body {
+            background: linear-gradient(120deg,
+            #c4c5ea 0%,
+            #e4ebf1 100%
+            );
+            background-size: cover;
+            min-height: 100vh;
+        }
+
+        .header {
+            padding: 1rem 2rem;
+            background: transparent;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .home-button {
+            color: #333;
+            border: 1px solid black;
+            border-radius: 4px;
+            text-decoration: none;
+            padding: 0.5rem 2rem;
+            transition: background-color 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 650px;
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-control {
+            background-color: #f8f9fa;
+            border: none;
+            padding: 0.8rem 1rem;
+            border-radius: 10px;
+        }
+
+        .btn-login {
+            background-color: #1782bf;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 10px;
+            width: 100%;
+            color: white;
+            font-weight: 500;
+        }
+
+        .forgot-password {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .create-account {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .input-group-text {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-control:focus {
+            box-shadow: none;
+            border-color: #00d15b;
+        }
+
+        .main-content {
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+
+        .eye-icon {
+            color: #666;
+        }
+
+        .eye-icon:hover {
+            color: #333;
+        }
+    </style>
+    <script>
+        function parseQueryString(string) {
+            if(string == "") { return {}; }
+            var segments = string.split("&").map(s => s.split("=") );
+            var queryString = {};
+            segments.forEach(s => queryString[s[0]] = s[1]);
+            return queryString;
+        }
+
+        async function confirm(e) {
+            e.preventDefault();
+            let confirmForm = document.getElementById('confirmForm');
+            let payload = new FormData(confirmForm);
+            let myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+            let options = {
+                method: 'POST',
+                headers: myHeaders,
+                mode: 'cors',
+                cache: 'no-cache',
+                credentials: 'same-origin',
+                redirect: 'follow',
+                body: new URLSearchParams(payload),
+            };
+            fetch(`${confirmForm.action}`, options)
+                .then((response) => {
+                    if (response.ok) {
+                        alert("account created succesfully")
+                        window.location.href = "https://cybersecapp.lme:8443";
+                    }
+                })
+                .catch((err) => {
+                    console.info(err + " url: " + `${confirmForm.action}`);
+                });
+        }
+
+    </script>
+</head>
+<body>
+
+<!-- Main Content -->
+<div class="main-content d-flex align-items-center justify-content-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="login-container mx-auto">
+                    <h2 class="text-center mb-2">Activate Account</h2>
+                    <p class="text-center text-muted mb-4">Confirmation code is sent to your Email</p>
+                    <form method="post" action="/rest-iam/register/activate" class="signin-form needs-validation" id="confirmForm" novalidate>
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <input name="code" class="form-control" id="code" type="text" placeholder="Activation Code" required="true"/>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-login mb-3">Activate</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    let confirmForm = document.getElementById('confirmForm');
+    confirmForm.addEventListener('submit', confirm);
+</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    font-family: 'Arial', sans-serif;
+    background-image :url('pages/3047867.jpg') ;
+    background-size: cover;
+    color: #000000;
+}
+
+/* Header Navigation */
+header {
+    background-color: #091B2E;
+    padding: 1rem;
+}
+nav{
+    margin-bottom: 5%;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #358cdd;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+.container{
+    padding-block: 10%;
+    padding-inline: 2%;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 1% 1% 1% 1%;
+
+}
+
+h1, h2 {
+    color: #358cdd;
+}
+
+/* Forms */
+form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form-group {
+    width: 100%;
+    max-width: 300px;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    background-color: #358cdd;
+    color: #ffffff;
+    padding: 0.5rem 1.5rem; /* Adjust padding for a smaller button */
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block; /* Ensures the button fits its content */
+    width: auto; /* Prevents full-width buttons */
+}
+
+button:hover {
+    background-color: #358cdd;
+}
