@@ -86,7 +86,7 @@ Deploy the generated .war file located in the target/ directory.
 
 Run the Application:
 
-Access the application in your browser at https://localhost:8443/your-app-context.
+Access the application in your browser at https://localhost:8443/
 
 Usage
 
